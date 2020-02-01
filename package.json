@@ -16,5 +16,7 @@
     "url": "https://github.com/HermSidhu/To-Do/issues"
   },
   "homepage": "https://github.com/HermSidhu/To-Do#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
+  }
 }
