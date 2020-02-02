@@ -148,6 +148,7 @@ body{
     padding: 0px;
     width: 100%;
     margin: 0;
+    position: fixed;
 }
   .header{
   width: 100%;
