@@ -1,3 +1,5 @@
+// Main App Component
+
 // Select the Elements
 const clear = document.querySelector('.clear');
 const dateElement = document.getElementById('date');
@@ -26,13 +28,13 @@ if (data) {
 }
 
 function loadList(array) {
-  array.forEach(function(item) {
+  array.forEach(function (item) {
     addToDo(item.name, item.id, item.done, item.trash)
   })
 }
 
 // clear local storage
-clear.addEventListener("click", function() {
+clear.addEventListener("click", function () {
   localStorage.clear();
   location.reload();
 })
@@ -46,10 +48,10 @@ dateElement.innerHTML = today.toLocaleDateString('en-US', options);
 // Add To Do function
 function addToDo(toDo, id, done, trash) {
 
-  if(trash) {return}
+  if (trash) { return }
 
   const DONE = done ? CHECK : UNCHECK;
-  
+
   const LINE = done ? LINE_THROUGH : '';
 
   const item = `<li class='item'>
@@ -58,35 +60,47 @@ function addToDo(toDo, id, done, trash) {
                   <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
                 </li>
                 `;
-
   const position = 'beforeend'
 
   list.insertAdjacentHTML(position, item);
 }
 
+// Submit Items
+function submitButton() {
+  const toDo = input.value;
+
+  if (toDo) {
+    addToDo(toDo, id, false, false);
+
+    LIST.push({
+      name: toDo,
+      id: id,
+      done: false,
+      trash: false
+    });
+    localStorage.setItem("TODO", JSON.stringify(LIST))
+
+    id++;
+  }
+  input.value = "";
+}
+
 // Item on enter key
-document.addEventListener("keyup", function(event) {
+document.addEventListener("keyup", function (event) {
   if (event.keyCode == 13) {
-    const toDo = input.value;
-    
-    if(toDo) {
-      addToDo(toDo, id, false, false);
-
-      LIST.push({
-        name: toDo,
-        id: id,
-        done: false,
-        trash: false
-      });
-
-      localStorage.setItem("TODO", JSON.stringify(LIST))
-
-      id++;
-    }
-    input.value = "";
+    submitButton();
   }
 });
 
+// edit to do
+function editToDo(element) {
+  element.parentNode.querySelector('.text').setAttribute("contentEditable", true);
+}
+document.addEventListener('click', function(event) {
+  const element = event.target
+  editToDo(element);
+  // localStorage.setItem("TODO", JSON.stringify(LIST))
+})
 
 // complete to do
 function completeToDo(element) {
@@ -100,16 +114,15 @@ function completeToDo(element) {
 // remove to do
 function removeToDo(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
-
   LIST[element.id].trash = true;
 }
 
 // target items created dynamically
-list.addEventListener('click', function(event) {
+list.addEventListener('click', function (event) {
   const element = event.target; // return clicked element inside list
   const elementJob = element.attributes.job.value; // complete or delete
 
-  if(elementJob == "complete") {
+  if (elementJob == "complete") {
     completeToDo(element);
   } else if (elementJob == "delete") {
     removeToDo(element);
