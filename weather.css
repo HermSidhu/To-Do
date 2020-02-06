@@ -33,7 +33,8 @@
 
 .weather-icon img{
   position: absolute;
-  top: 35px;
+
+  top: 10%;
   left: 120px;
   /* cursor: pointer; */
   -webkit-filter: invert(1);
