@@ -20,7 +20,7 @@
   height: 200px;
   /* left: 0; */
   border-radius: 15px 15px 0 0;
-  position: fixed;
+  position: relative;
   /* display: flex; */
   display: block;
   background-color: transparent;
