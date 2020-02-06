@@ -20,7 +20,6 @@ body{
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     position: relative;
-    overflow: auto;
 }
 .clear{
     width : 30px;
@@ -163,7 +162,6 @@ body{
   border-radius: 15px 15px 0 0;
   position: fixed;
   z-index: 1;
-  overflow: hidden;
 }
 .content{
   width:100%;
