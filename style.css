@@ -53,6 +53,7 @@ body{
     height: 50vh;
     background-color: #FFF;
     overflow: auto;
+    z-index: 10;
 }
 .container::-webkit-scrollbar { 
     display: none; 
