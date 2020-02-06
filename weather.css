@@ -32,16 +32,10 @@
 }
 
 .weather-icon img{
-  display: block;
-  margin: 10% auto;
-
-  margin: 0;
-  padding: 0;
-  
   position: absolute;
-  top: 0px;
-  left: 10px;
-  color: #FFF;
+  top: 35px;
+  left: 120px;
+  /* cursor: pointer; */
   -webkit-filter: invert(1);
    filter: invert(1);
 }
@@ -54,13 +48,13 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
-.temperature-value p{
-  padding: 0;
-  margin-top: 15px;
-  margin-left: 100px;
+.temperature-value p{  
+  position: absolute;
+  top: 120px;
+  left: 320px;
   color: #FFF;
-  font-size: 4em;
-  text-align: center;
+  font-size: 25px;
+  font-family: 'Titillium Web', sans-serif;
   cursor: pointer;
 }
 
@@ -83,10 +77,10 @@
   color: #FFF;
   text-align: center;
   font-size: 1.2em;
-
   position: absolute;
-  bottom: 50px;
-  left: 10px;
+  left: 260px;
+
+  bottom: 90px;
   color: #FFF;
   font-size: 15px;
   font-family: 'Titillium Web', sans-serif;
@@ -101,7 +95,7 @@
   padding: 0;
   
   position: absolute;
-  bottom: 10px;
+  top: 20px;
   right: 10px;
   color: #FFF;
   font-size: 25px;
