@@ -1,5 +1,5 @@
 // Weather in Header
-require('dotenv').config()
+require('dotenv').config();
 
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
