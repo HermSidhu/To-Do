@@ -1,5 +1,4 @@
 // Weather in Header
-require('dotenv').config();
 
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
@@ -18,7 +17,7 @@ weather.temperature = {
 // APP CONSTS AND VARS
 const KELVIN = 273;
 // API KEY
-const key = process.env.Weahter_API_Key;
+const key = "5c54be25a98674eea359fd12395cab41";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if ('geolocation' in navigator) {

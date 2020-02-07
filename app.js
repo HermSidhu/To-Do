@@ -93,14 +93,14 @@ document.addEventListener("keyup", function (event) {
 });
 
 // edit to do
-function editToDo(element) {
-  element.parentNode.querySelector('.text').setAttribute("contentEditable", true);
-}
-document.addEventListener('click', function(event) {
-  const element = event.target
-  editToDo(element);
+// function editToDo(element) {
+//   element.parentNode.querySelector('.text').setAttribute("contentEditable", true);
+// }
+// document.addEventListener('click', function(event) {
+//   const element = event.target
+//   editToDo(element);
   // localStorage.setItem("TODO", JSON.stringify(LIST))
-})
+// })
 
 // complete to do
 function completeToDo(element) {
