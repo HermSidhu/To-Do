@@ -1,6 +1,6 @@
 # To-Do
 
-To-Do is a full stack web application that helps you stay organized, built with JavaScript, HTML, & CSS.
+To-Do is a full stack web application that helps you stay organized while providing you with the current weather, built with JavaScript, HTML, & CSS.
 
 <span>
 
