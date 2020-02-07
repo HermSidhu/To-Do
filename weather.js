@@ -18,7 +18,7 @@ weather.temperature = {
 // APP CONSTS AND VARS
 const KELVIN = 273;
 // API KEY
-const key = process.env.Weahter_API_Key
+const key = process.env.Weahter_API_Key;
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if ('geolocation' in navigator) {
@@ -61,7 +61,6 @@ function getWeather(latitude, longitude) {
         .then(function () {
             displayWeather();
         });
-    console.log(key);
 }
 
 // DISPLAY WEATHER TO UI
