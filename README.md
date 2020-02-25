@@ -4,8 +4,8 @@ To-Do is a full stack web application that helps you stay organized while provid
 
 <span>
 
-<img src='Mobile_view.png' width='200' height='400' >
+<img src='public/Mobile_view.png' width='200' height='400' >
 
-<img src='Desktop_view.png' width='500' height='400' >
+<img src='publicDesktop_view.png' width='500' height='400' >
 
 </span>
