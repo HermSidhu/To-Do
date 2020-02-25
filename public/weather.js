@@ -16,8 +16,6 @@ weather.temperature = {
 
 // APP CONSTS AND VARS
 const KELVIN = 273;
-// API KEY
-const key = "5c54be25a98674eea359fd12395cab41";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if ('geolocation' in navigator) {
@@ -29,10 +27,10 @@ if ('geolocation' in navigator) {
 
 // SET USER'S POSITION
 function setPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
 
-    getWeather(latitude, longitude);
+    getWeather(lat, lon);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
@@ -42,10 +40,10 @@ function showError(error) {
 }
 
 // GET WEATHER FROM API PROVIDER
-function getWeather(latitude, longitude) {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+function getWeather(lat, lon) {
+    let api_url = `weather/${lat},${lon}`;
 
-    fetch(api)
+    fetch(api_url)
         .then(function (response) {
             let data = response.json();
             return data;
